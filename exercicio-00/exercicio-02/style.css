@@ -1,0 +1,104 @@
+/* Usando a fonte Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  input:focus, button:focus {
+    border-color: #666;
+  }
+  
+  #task-input {
+    width: 70%;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: var(--task-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  button[aria-label="Remover tarefa"] {
+    background-color: #dc3545;
+  }
+  
+  button[aria-label="Remover tarefa"]:hover {
+    background-color: #c82333;
+  }
+  
+  button[aria-label="Marcar como concluída"] {
+    background-color: #28a745;
+  }
+  
+  button[aria-label="Marcar como concluída"]:hover {
+    background-color: #218838;
+  }
+  
+  :root {
+    --background-color: #ae00ff;
+    --text-color: #000000;
+    --task-background: #6d6870;
+  }
+  
+  .dark-theme {
+    --background-color: #000000;
+    --text-color: #f0f0f0;
+    --task-background: #ff0000;
+  }

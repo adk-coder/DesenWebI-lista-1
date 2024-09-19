@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lista de Tarefas</h1>
+      <button id="toggle-theme" aria-label="Alternar entre tema claro e escuro">Alternar Tema</button>
+    </header>
+
+    <main>
+      <input type="text" id="task-filter" placeholder="Filtrar tarefas por nome" aria-label="Campo para filtrar tarefas" />
+
+      <form id="task-form" aria-label="Formulário para adicionar nova tarefa">
+        <input type="text" id="task-input" placeholder="Adicionar nova tarefa" required aria-label="Campo para adicionar nova tarefa" />
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <ul id="task-list" aria-live="polite"></ul>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

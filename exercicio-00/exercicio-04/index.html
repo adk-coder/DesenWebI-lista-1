@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto e Localização</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Captura de Foto e Localização</h1>
+        
+        <div class="form-group">
+            <label for="title">Título da Foto (obrigatório):</label>
+            <input type="text" id="title" placeholder="Digite o título" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="description">Descrição (opcional):</label>
+            <input type="text" id="description" placeholder="Digite a descrição">
+        </div>
+        
+        <div class="form-group">
+            <button id="openCamera">Abrir Câmera</button>
+            <input type="file" id="fileInput" accept="image/*" style="display:none">
+            <video id="video" autoplay></video>
+            <canvas id="canvas" style="display:none"></canvas>
+        </div>
+
+        <div class="form-group">
+            <button id="takePhoto">Tirar Foto</button>
+            <img id="photo" style="display:none;">
+        </div>
+        
+        <div class="form-group">
+            <button id="markLocation">Marcar Localização</button>
+            <p id="locationInfo"></p>
+            <div id="map" style="height: 300px; width: 100%;"></div>
+        </div>
+
+        <button id="savePhoto">Salvar Foto</button>
+
+        <h2>Fotos Capturadas</h2>
+        <table id="photosTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Localização</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

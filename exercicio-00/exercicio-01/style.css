@@ -1,0 +1,197 @@
+/* Use o conteúdo HTML abaixo contém a estrutura base para uma página com barra de navegação (logotipo a esquerda e menu a direita), cabeçalho, conteúdo principal dividido em três colunas e rodapé. Adicione o estilo CSS para 
+organizar os elementos. Use 3 estilos diferentes para organizar o conteúdo:
+ Estilo 1: use display: block com float.
+ Estilo 2: use display: flex com flex-direction, justify-content, align-items, etc
+ Estilo 3: use display: grid com grid-template-columns, grid-template-areas, etc
+/
+
+/* Estilo 1: display block e float */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .logo {
+    float: left;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  #menu {
+    float: right;
+  }
+  
+  #menu ul {
+    list-style-type: none;
+  }
+  
+  #menu ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  #menu ul li a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+  }
+  
+  .jumbotron {
+    padding: 20px;
+    background-color: #ff0000;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .linha {
+    margin-top: 20px;
+  }
+  
+  .coluna {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+  }
+  
+  .coluna:last-child {
+    margin-right: 0;
+  }
+  
+  footer {
+    clear: both;
+    background-color: #333;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+
+  /* Estilo 2: display flex */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff0000;
+    padding: 10px;
+  }
+  
+  .logo {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  #menu ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  #menu ul li {
+    margin-right: 20px;
+  }
+  
+  #menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #eee;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .coluna {
+    width: 30%;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  /* Estilo 3: display grid */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  #menu ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  #menu ul li {
+    margin-left: 20px;
+  }
+  
+  #menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .jumbotron {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    background-color: #eee;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    padding: 10px;
+  }
+  
